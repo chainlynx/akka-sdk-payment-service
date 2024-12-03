@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.akka</groupId>
+    <artifactId>akka-javasdk-parent</artifactId>
+    <version>3.0.0</version>
+  </parent>
+
+  <groupId>com.example</groupId>
+  <artifactId>java-sdk-payment-service</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>java-sdk-payment-service</name>
+  <properties>
+    <!-- For Docker setup see https://docs.kalix.io/operations/container-registries.html -->
+    <!--<kalixContainerRegistry>kcr.us-east-1.kalix.io</kalixContainerRegistry>-->
+    <!--
+    <kalixContainerRegistry>chainlynx</kalixContainerRegistry>
+    <kalixOrganization>lightbend</kalixOrganization>
+    <dockerImage>${container.registry}/${project.artifactId}</dockerImage>
+    <dockerTag>${project.version}-${maven.build.timestamp}</dockerTag>
+    -->
+    <!--<mainClass>com.example.Main</mainClass>-->
+
+    <container.registry>kcr.us-east-1.kalix.io</container.registry>
+    <!--<container.registry>chainlynx</container.registry>-->
+    <organization>lightbend</organization>
+
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.awaitility</groupId>
+      <artifactId>awaitility</artifactId>
+      <version>4.1.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
